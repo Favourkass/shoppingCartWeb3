@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// App.tsx
+import React, { useState, useEffect } from 'react';
+import ProductList from './components/products';
+import ShoppingCart from './components/shoppingCart';
+import { CartItem } from './components/interfaces';
+const App: React.FC = () => {
+  const [cart, setCart] = useState<CartItem[]>([]);
 
-function App() {
+  // Load cart from local storage on component mount
+  useEffect(() => {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+      setCart(JSON.parse(savedCart));
+    }
+  }, []);
+
+  // Save cart to local storage on cart change
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Shopping Cart App</h1>
+      <ProductList cart={cart} setCart={setCart} />
+      <ShoppingCart cart={cart} setCart={setCart} />
     </div>
   );
-}
+};
 
 export default App;

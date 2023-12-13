@@ -1,14 +1,14 @@
 // App.tsx
-import React, { useState, useEffect } from 'react';
-import ProductList from './components/products';
-import ShoppingCart from './components/shoppingCart';
-import { CartItem } from './components/interfaces';
+import React, { useState, useEffect } from "react";
+import ProductList from "./components/products";
+import ShoppingCart from "./components/shoppingCart";
+import { CartItem } from "./components/interfaces";
 const App: React.FC = () => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   // Load cart from local storage on component mount
   useEffect(() => {
-    const savedCart = localStorage.getItem('cart');
+    const savedCart = localStorage.getItem("cart");
     if (savedCart) {
       setCart(JSON.parse(savedCart));
     }
@@ -16,7 +16,7 @@ const App: React.FC = () => {
 
   // Save cart to local storage on cart change
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   return (

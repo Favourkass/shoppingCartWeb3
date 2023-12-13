@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+## Shopping Cart App
+This project is a simple React.js application for managing shopping cart items. Users can view a list of products, add them to the shopping cart, adjust quantities, remove items, and view the total amount. The application also supports a coupon discount feature for a 10% discount upon checkout.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+Display a list of at least 10 products with names and amounts.
+Add products to the shopping cart.
+Adjust the quantity of items in the cart.
+Remove items from the cart.
+View the total amount of the products.
+Apply a discount using the coupon code (WEB3BRIDGECOHORTx) for a 10% discount.
+Persist the shopping cart data upon page refresh.
+Technologies Used
+React.js
+TypeScript
+HTML
+CSS
+Project Structure
+src/components: Contains React components.
 
-## Available Scripts
+### ProductList.tsx: Displays the list of products.
+### ShoppingCart.tsx: Manages the shopping cart, including adding, removing, and updating quantities.
+### src/interfaces: Contains TypeScript interfaces for Product and CartItem.
 
+### src/App.tsx: Main application component combining the product list and shopping cart components.
+
+Available Scripts
 In the project directory, you can run:
 
-### `npm start`
+npm start
+Runs the app in development mode. Open http://localhost:3000 to view it in the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm run build
+Builds the app for production to the build folder.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+How to Use
+Clone the repository:
 
-### `npm test`
+bash
+Copy code
+### git clone https://github.com/Favourkass/shoppingCartWeb3.git
+Navigate to the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+cd shopping-cart
 
-### `npm run build`
+### Install dependencies:
+bash
+Copy code
+npm install
+Run the app:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy code
+npm start
+Open http://localhost:3000 in your browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Usage Instructions
+Product List:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Browse the list of products.
+Click "Add to Cart" to add a product to the shopping cart.
 
-### `npm run eject`
+### Shopping Cart:
+View and adjust the quantity of items in the cart.
+Click "Remove from Cart" to remove an item from the cart.
+Enter the coupon code (WEB3BRIDGECOHORTx) for a 10% discount.
+View the subtotal, discount applied, and the total amount.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Persist Data:
+Shopping cart data is saved locally and persists upon page refresh.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Mobile Responsive:
+The application is designed to be mobile-responsive for a seamless experience on various devices.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Note
+For development purposes, you can explore the code in the src directory.
+This project does not include the testing process in the README. Testing configurations can be added separately based on your preferences and requirements.
